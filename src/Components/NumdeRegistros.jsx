@@ -1,10 +1,10 @@
 import React from 'react';
 
-const NumdeRegistros = ({ totalRegistros }) => {
+const NumdeRegistros = ({ totalRegistros, personasTotales }) => {
   return (
     <div>
       <div>
-        <p>Total registros: {totalRegistros} de 20</p>
+        <p>Total registros: {totalRegistros} de {personasTotales}</p>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ function App() {
   const [contador, setContador] = useState(5);
 
 
-  const personasIniciales = [
+  const [personasIniciales] = useState([
     { id: "1", nombre: "Miguel", apellido: "Angel", descripcion: "Estudio Adso" },
     { id: "2", nombre: "Ana", apellido: "González", descripcion: "Trabaja como ingeniera" },
     { id: "3", nombre: "Carlos", apellido: "Martínez", descripcion: "Apasionado por la fotografía" },
@@ -33,7 +33,7 @@ function App() {
     { id: "18", nombre: "Valentina", apellido: "Carrrasquilla", descripcion: "Chef" },
     { id: "19", nombre: "Gabriela", apellido: "Reina", descripcion: "Ingeniero mecatronica" },
     { id: "20", nombre: "Cesar", apellido: "Fernández", descripcion: "Estudiante de enfermeria" }
-];
+]);
 
   const buscador = (buscadorValue) =>{
     setFiltro(buscadorValue)
@@ -70,7 +70,10 @@ function App() {
       </div>
       <Tabla personas={personasFiltradas}></Tabla>
 
-      <NumdeRegistros totalRegistros={personasFiltradas.length} />
+      <NumdeRegistros
+        totalRegistros={personasFiltradas.length}
+        personasTotales={personasIniciales.length}
+      />
     </div>
   );
 }
