@@ -21,3 +21,13 @@ body {
   justify-content: center;
   width: 100%;
 }
+
+select{
+  padding: 3%;
+}
+
+.slect{
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
